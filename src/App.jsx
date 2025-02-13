@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./App.css";
 
 export default function Calculator() {
   const [a, setA] = useState(0);
