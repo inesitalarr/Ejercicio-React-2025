@@ -35,13 +35,13 @@ export default function Calculator() {
           <button
             key={op}
             onClick={() => setOperation(op)}
-            className={`p-2 rounded border ${operation === op ? "bg-blue-500 text-white" : "bg-gray-200"}`}
+            className={`p-3 rounded-lg text-lg font-semibold shadow-md transition-all duration-200 ${operation === op ? "bg-blue-500 text-white" : "bg-gray-300 hover:bg-gray-400"}`}
           >
             {op}
           </button>
         ))}
       </div>
-      <div className="p-4 border rounded text-lg font-bold">
+      <div className="p-4 border rounded-lg text-xl font-bold bg-white shadow-md w-full text-center">
         Resultado: {calculateResult()}
       </div>
     </div>
