@@ -9,8 +9,8 @@ export default function Calculator() {
   const calculateResult = () => {
     if (operation === "+") return a + b;
     if (operation === "-") return a - b;
-    if (operation === "*") return a * b;
-    if (operation === "/") return b !== 0 ? a / b : "Error";
+    if (operation === "x") return a * b;
+    if (operation === "÷") return b !== 0 ? a / b : "Error";
     return "";
   };
 
