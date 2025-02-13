@@ -14,21 +14,22 @@ export default function Calculator() {
   };
 
   return (
-    <div className="flex flex-col items-center p-4 space-y-4">
-      <div className="flex space-x-2">
-        <input
-          type="number"
-          value={a}
-          onChange={(e) => setA(Number(e.target.value))}
-          className="border p-2 rounded"
-        />
-        <input
-          type="number"
-          value={b}
-          onChange={(e) => setB(Number(e.target.value))}
-          className="border p-2 rounded"
-        />
-      </div>
+    <div className="flex flex-col items-center p-6 space-y-6 bg-gray-100 rounded-lg shadow-lg w-80 mx-auto mt-10">
+      <h1 className="text-2xl font-bold text-gray-700">Calculadora</h1>
+        <div className="flex space-x-4">
+          <input
+            type="number"
+            value={a}
+            onChange={(e) => setA(Number(e.target.value))}
+            className="border p-2 rounded"
+          />
+          <input
+            type="number"
+            value={b}
+            onChange={(e) => setB(Number(e.target.value))}
+            className="border p-2 rounded"
+          />
+        </div>
       <div className="flex space-x-2">
         {["+", "-", "*", "/"].map((op) => (
           <button
