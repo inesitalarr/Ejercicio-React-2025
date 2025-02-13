@@ -1,35 +1,48 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function Calculator() {
+  const [a, setA] = useState(0);
+  const [b, setB] = useState(0);
+  const [operation, setOperation] = useState(null);
+
+  const calculateResult = () => {
+    if (operation === "+") return a + b;
+    if (operation === "-") return a - b;
+    if (operation === "*") return a * b;
+    if (operation === "/") return b !== 0 ? a / b : "Error";
+    return "";
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="flex flex-col items-center p-4 space-y-4">
+      <div className="flex space-x-2">
+        <input
+          type="number"
+          value={a}
+          onChange={(e) => setA(Number(e.target.value))}
+          className="border p-2 rounded"
+        />
+        <input
+          type="number"
+          value={b}
+          onChange={(e) => setB(Number(e.target.value))}
+          className="border p-2 rounded"
+        />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <div className="flex space-x-2">
+        {["+", "-", "*", "/"].map((op) => (
+          <button
+            key={op}
+            onClick={() => setOperation(op)}
+            className={`p-2 rounded border ${operation === op ? "bg-blue-500 text-white" : "bg-gray-200"}`}
+          >
+            {op}
+          </button>
+        ))}
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+      <div className="p-4 border rounded text-lg font-bold">
+        Resultado: {calculateResult()}
+      </div>
+    </div>
+  );
 }
-
-export default App
