@@ -47,3 +47,11 @@ button {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
+
+button:hover {
+  background: #0056b3;
+}
+
+button.active {
+  background: #28a745;
+}
