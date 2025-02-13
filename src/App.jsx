@@ -21,17 +21,17 @@ export default function Calculator() {
             type="number"
             value={a}
             onChange={(e) => setA(Number(e.target.value))}
-            className="border p-2 rounded"
-          />
+            className="border p-2 rounded w-24 text-center text-lg shadow-sm"
+            />
           <input
             type="number"
             value={b}
             onChange={(e) => setB(Number(e.target.value))}
-            className="border p-2 rounded"
-          />
+            className="border p-2 rounded w-24 text-center text-lg shadow-sm"
+            />
         </div>
-      <div className="flex space-x-2">
-        {["+", "-", "*", "/"].map((op) => (
+      <div className="flex space-x-4">
+        {["+", "-", "x", "÷"].map((op) => (
           <button
             key={op}
             onClick={() => setOperation(op)}
