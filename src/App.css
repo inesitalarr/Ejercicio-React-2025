@@ -55,3 +55,13 @@ button:hover {
 button.active {
   background: #28a745;
 }
+
+.result-box {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #333;
+}
