@@ -2,11 +2,15 @@ import { useState } from "react";
 import "./App.css";
 
 export default function Calculator() {
-  const [a, setA] = useState(0);
-  const [b, setB] = useState(0);
+  const [a, setA] = useState("");
+  const [b, setB] = useState("");
   const [operation, setOperation] = useState(null);
 
   const calculateResult = () => {
+
+    const numA = a === "" ? 0 : a;
+    const numB = b === "" ? 0 : b;
+
     if (operation === "+") return a + b;
     if (operation === "-") return a - b;
     if (operation === "x") return a * b;
@@ -19,17 +23,17 @@ export default function Calculator() {
       <h1 className="text-2xl font-bold text-gray-700">CALCULADORA</h1>
         <div className="flex space-x-4">
           <input
-            type="number"
-            value={a}
-            onChange={(e) => setA(Number(e.target.value))}
-            className="border p-2 rounded w-24 text-center text-lg shadow-sm"
-            />
-          <input
-            type="number"
-            value={b}
-            onChange={(e) => setB(Number(e.target.value))}
-            className="border p-2 rounded w-24 text-center text-lg shadow-sm"
-            />
+          type="number"
+          value={a}
+          onChange={(e) => setA(e.target.value === "" ? "" : Number(e.target.value))}
+          className="border p-2 rounded w-24 text-center text-lg shadow-sm"
+        />
+        <input
+          type="number"
+          value={b}
+          onChange={(e) => setB(e.target.value === "" ? "" : Number(e.target.value))}
+          className="border p-2 rounded w-24 text-center text-lg shadow-sm"
+        />
         </div>
       <div className="flex space-x-4">
         {["+", "-", "x", "÷"].map((op) => (
