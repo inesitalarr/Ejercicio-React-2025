@@ -16,7 +16,7 @@ export default function Calculator() {
 
   return (
     <div className="calculator-container flex flex-col items-center p-6 space-y-6 bg-gray-100 rounded-lg shadow-lg w-80 mx-auto mt-10">
-      <h1 className="text-2xl font-bold text-gray-700">Calculadora</h1>
+      <h1 className="text-2xl font-bold text-gray-700">CALCULADORA</h1>
         <div className="flex space-x-4">
           <input
             type="number"
