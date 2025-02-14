@@ -21,15 +21,17 @@ body {
 h1 {
   color: #090e41;
   margin-bottom: 20px;
-  font-family: 'STIX Two Math', serif;}
+  font-family: 'STIX Two Math', serif;
+}
 
 input {
-  border: 2px solid #ccc;
+  border: 2px solid #0e16b4;
   border-radius: 8px;
   padding: 10px;
   font-size: 18px;
   text-align: center;
   transition: all 0.3s ease-in-out;
+  margin: 3px;
 }
 
 input:focus {
@@ -39,22 +41,23 @@ input:focus {
 }
 
 button {
-  background: #007bff;
-  color: white;
+  background: #caa1f0;
+  color: rgb(7, 7, 7);
   border: none;
   padding: 12px;
-  font-size: 18px;
+  font-size: 28px;
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  margin: 5px;
 }
 
 button:hover {
-  background: #0056b3;
+  background: #bdcde7;
 }
 
 button.active {
-  background: #28a745;
+  background: #e9eeea;
 }
 
 .result-box {
@@ -65,4 +68,5 @@ button.active {
   font-weight: bold;
   margin-top: 20px;
   color: #333;
+  font-family: 'STIX Two Math', serif;
 }
