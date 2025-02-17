@@ -1,8 +1,3 @@
-# React + Vite
+En este repositorio se añade la segunda tarea de la asignatura sobre REACT.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+En concreto se realiza una calculadora. Todo el código se encuentra dentro de la carpeta source en App.jsx y en App.css, además el fondo de la aplicación se guarda dentro de img > fondo.jpg.
